@@ -1,0 +1,173 @@
+%===============================================================================
+% Zweck:    KTR-Präsentation-Vorlage
+% Erstellt: 15.04.2013
+% Update:   04.07.2016
+% Autor:    M.G.
+%===============================================================================
+\RequirePackage[hyphens]{url}
+\newcommand\ratio{169}
+\documentclass[10pt,aspectratio=\ratio,
+%draft,
+%handout,
+compress
+]{beamer}
+
+\newcommand\meta{./meta}
+\input{\meta/config/commands}
+
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{fancyquotes}}
+  {\signed{\usebox\mybox}\end{fancyquotes}}
+
+
+
+\input{\meta/config/hyphenation}
+
+\setbeamertemplate{caption}[numbered]
+%\numberwithin{figure}{section}
+
+\begin{document}
+  %===============================================================================
+  % Zum Kompilieren latexmk ausführen.
+  %	Konfiguration in texmaker: Options -> Configure Texmaker -> Quick Build -> Select Latexmk + ViewPD
+  %	Entsprechende Informationen in den config/metainfo verändern
+  % Zur Auswahl der Sprache im folgenden Befehl
+  % ngerman für deutsch eintragen, english für Englisch.
+  %===============================================================================
+\selectlanguage{english}
+\ifnum\ratio<169
+\frame{\titlepage}
+\else
+\frame[plain]{\titlepage}
+\fi
+
+%\AtBeginSection[]
+%{
+%  \frame<handout:0>
+%  {
+%    \frametitle{Outline}
+%    \tableofcontents[currentsection,hideallsubsections]
+%  }
+%}
+
+\AtBeginSubsection[]
+{
+  \frame<handout:0>
+  {
+    \frametitle{Outline}
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide,subsubsectionstyle=hide]
+  }
+}
+
+\AtBeginSubsubsection[]
+{
+  \frame<handout:0>
+  {
+    \frametitle{Outline}
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+  }
+}
+
+\newcommand<>{\highlighton}[1]{%
+  \alt#2{\structure{#1}}{{#1}}
+}
+
+\newcommand{\icon}[1]{\pgfimage[height=1em]{#1}}
+
+\section*{}
+\phantomsection
+\begin{frame}{Content}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Content starts here %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+\begin{frame}{Introduction}
+This presentation talks about superoptimization
+\end{frame}
+\section{Simple Assembly language Optimization Techniques}
+\begin{frame}{Assembly}
+\begin{itemize}
+\item Replace decision constructs with logical and arithmetic operations
+\item Unroll loops to avoid pipeline dependencies
+\item Parallelize Load/Store with MAC instructions
+\end{itemize}
+\end{frame}
+\section{Learnings from Synthesis kernel and OS}
+\begin{frame}{Optimizations in Synthesis Kernel}
+\begin{itemize}
+\item Dynamic Code Generation
+\item Software Feedback
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Optimizations from Synthesis OS}
+
+\end{frame}
+
+\section{Introducing SuperOptimizers}
+\begin{frame}{Basic Superoptimizer steps}
+\begin{itemize}
+\item Boolean Test
+\item Probabilistic Test
+\item Pruning
+\item Applications and Limitations
+\end{itemize}
+\end{frame}
+
+\section{Peephole Superoptimizers and Modern Compilers}
+\begin{frame}{Automatic Generation of Peephole Superoptimizers}
+\end{frame}
+\begin{frame}{Improving Binary Translations using Peephole superoptimizers}
+\end{frame}
+\begin{frame}{GNU Superoptimizer}
+\begin{itemize}
+\item https://www.gnu.org/software/superopt/
+\item Usage of superopt command, options and results
+\end{itemize}
+\end{frame}
+\begin{frame}{LLVM and JIT}
+\end{frame}
+\section{Conclusion}
+\begin{frame}{Conclusion}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% References          %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{}
+\begin{frame}[allowframebreaks]{References}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \scriptsize
+ \bibliographystyle{IEEEtran}
+ \bibliography{\meta/exampleLiterature/bib}
+ \normalsize
+\end{frame}
+
+%% Last frame
+\frame{
+  \vspace{2cm}
+  {\huge Questions ?}
+
+  \vspace{20mm}
+  \nocite*
+
+  \begin{flushright}
+    Marcel Gro\ss mann
+
+    \structure{\footnotesize{\href{mailto:marcel.grossmann@uni-bamberg.de}{marcel.grossmann@uni-bamberg.de}}}
+  \end{flushright}
+}
+
+
+\end{document}
