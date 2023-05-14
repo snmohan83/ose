@@ -1,365 +1,353 @@
-\documentclass[sigconf, language=english]{acmart}
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[sigconf]{acmart}
 
-% if you need to pass options to natbib, use, e.g.:
-%     \PassOptionsToPackage{numbers, compress}{natbib}
-% before loading neurips_2022
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
 
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmcopyright}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
 
-% ready for submission
-%\usepackage{ofu_xai_2022}
-
-\input{math_commands.tex}
-
-% to compile a preprint version, e.g., for submission to arXiv, add add the
-% [preprint] option:
-%     \usepackage[preprint]{ofu_xai_2022}
-
-
-% to compile a camera-ready version, add the [final] option, e.g.:
-% \usepackage[final, nonatbib]{ofu_xai_2022}	
-
-% to avoid loading the natbib package, add option nonatbib:
-%    \usepackage[nonatbib]{ofu_xai_2022}
-
-
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
-\usepackage{xcolor}         % colors
-\usepackage{wrapfig}        % wrap figure in page
-\usepackage{graphicx}       % for includegraphics
-\usepackage{caption}        % Add figure captions
-\usepackage{multicol}       % Add multiple columns
-\usepackage[most]{tcolorbox} % Add boundaries to images
-\usepackage[export]{adjustbox} % Change alignment of figures
-
-
-% \usepackage[round]{natbib}
-%%%%
-
-\title{Seminar on xAI application in detection and survival rate prediction of breast cancer patients}
-
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to LaTeX to determine where to break the
-% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
-% authors names on the first line, and the last on the second line, try using
-% \AND instead of \And before the third author name.
-
-
-\author{%
-  Sridhara Madhu Mohan Nelemane\thanks{Alternate email: snmohan83@gmail.com; github: https://github.com/snmohan83/xAI} \\
-  Otto-Friedrich University of Bamberg\\
-  96049 Bamberg, Germany\\
-  \texttt{sridhara-madhu-mohan.nelemane@stud.uni-bamberg.de} \\[0.5cm]
-  Seminar: xAI-Sem-Summer-2022 \\
-  Degree: M.Sc. ISoSySc \\
-  Matriculation \#: 1941196
-  % examples of more authors
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \AND
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation emai}{June 03--05,
+  2018}{Woodstock, NY}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/18/06}
 
 
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
 \begin{document}
 
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Ideas from the Synthesis Kernel in Modern Systems: Optimization techniques and SuperOptimizers}
 
-\maketitle
-\def\va{{\bm{a}}}
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+\author{Sridhara Madhu Mohan Nelemane}
+\affiliation{%
+ \institution{University of Bamberg}
+ \city{Bamberg}
+ \country{Germany}}
 
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Trovato et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
 \begin{abstract}
-  12.5\% of all cancers in the world are breast cancers. It is also the most common cause of \textit{"death due to illness"} among women. Owing to the commonality of the cancer, we also have availability of significant amount of data from previous patients. Several research efforts are undertaken both in the medical and technology communities to advance detection and treatment effectiveness for cancer. Traditional methods that use human readers is time-consuming and also suffer from short supply of medical professionals. The available Machine Learning tend to black-box its learning stages and the biases thereby losing trust among medical decision makers and patients. Explainable AI methods therefore provide a solution to both these problems. xAI provides solution in three dimensions: 1) It saves effort from medical professionals by aiding them in reading mammograms, scan reports and slide images. 2) It provides novel insghts into understanding the causes of cancer and devicing better treatment solutions. 3) It can provide early-detection by analysing pre-conditions that are not obvious to the human eye. Through this seminar report, we examine all of the 3 dimensions in which xAI can improve care for breast cancer patients. The report also describes the challenges and future work in this aspect.
+
+    The paper from Henry Massalin \cite{synthesis92} was considered futuristic 
+    for its time. Several ideas were proposed in this paper towards developing
+    a much more sophisticated operating system. These ideas particularly focussed 
+    on performance of the operating system and an implementation called Synthesis
+    kernel was used to drive the concept home. This seminar paper refers to the 
+    same research and implementation and tries to provide an understanding
+    some of the same ideas in the modern context. In particular the paper focuses on
+    techniques of SuperOptimization utilized in Runtime Code Generation phase
+    of the Synthesis Operating system. 
+
 \end{abstract}
 
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Operating Systems Design</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Optimization</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>SuperOptimization</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Synthesis Kernel</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Runtime Code Generation</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
 
-\section{Breast Cancer Clinical Detection Methods}
+\ccsdesc{Operating Systems Design-Performance}
+\ccsdesc{Optimization - Techniques}
+\ccsdesc{SuperOptimization}
+\ccsdesc{Synthesis Kernel}
+\ccsdesc{Runtime Code Generation}
 
-For the purpose of this report, 5 methods of clinically detecting breast cancer are considered and explained below:
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{datasets, neural networks, gaze detection, text tagging}
+%% A "teaser" image appears between the author and affiliation
+%% information and the body of the document, and typically spans the
+%% page.
+%%\begin{teaserfigure}
+%%  \includegraphics[width=\textwidth]{sampleteaser}
+%%  \caption{Seattle Mariners at Spring Training, 2010.}
+%%  \Description{Enjoying the baseball game from the third-base
+%%  seats. Ichiro Suzuki preparing to bat.}
+%%  \label{fig:teaser}
+%%\end{teaserfigure}
 
-\begin{enumerate}
-\item \textbf{Physical Examination} - Done by a medical professional or a family doctor and normally detection is possible only when a lump can be physically felt. When detected in such a stage, the cancer is already developed and could be an advanced stage thereby not really helpful in controlling the disease.
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
 
-\item \textbf{Mammography} - This is a technique similar to X-ray but focussed on the breast tissues. The result of a Mammography is a digital image that can be conviniently read by a medical professional or fed into a digital system for analysis. The reading of Mammograms is however time-consuming and also prone to human errors. Therefore, AI method have been deviced to provide higher accuracy and better sensitivity. This report provides analysis of such techniques.
+\section{Introduction}
+Before the invention of hyperthreading and powerful processors with big working memories as we have today, the processors had meagre processing power and very low RAM capacity. In such processors, running complex algorithms were challenging. Operating system itself consumed significant resources and optimization was one of the key research topics for operating system experts. It was under these circumstances that Henry Massalin proposed ideas for Operating system optimization. These ideas are extremely relevant even today. However, it needs some investigation with a modern perspective as demonstrated in the blog \cite{synthesis2019}
 
-\item \textbf{Digital Pathology} - This technique use whole slide images of breast tissue samples for analysis under a microscope. Digital techniques are preferred to human reading of these images due to the effort needed, shortage of medical professionals time and also better accuracy.
+The paper introduced the concept of Runtime Code generation helping build purposefully optimized code. The techniques included among other ideas, constant folding, constant propagation, and procedure inlining. The paper also proposed the idea of superoptimizer which searches for the smallest of possible programs to achieve a given objectives. These and other ideas are explored in later sections of this paper.
 
-\item \textbf{Deep Tissue Biopsy} - This is a confirmation technique done when a positive result is shown in one of the other methods like Mammography. This involves a minor surgical procedure to extract a sample of the breast tissue from the suspected region and detailed chemical and microscopic analysis to determine the type and characteristics of the cancer. It is rather used as a technique for classification of cancer that helps in determining the course of treatment. Since the procedure requires a professional surgeon to perform the incision and a standard Operation Theatre arrangement, it is an expensive method used only for confirmation.
+\section{Synthesis Kernel and Operating Systems Design}
+The basic premise of the Synthesis kernel proposed in \cite{synthesis92} is that operating system performance can be enhanced through few strategies of optimization during runtime code-generation. Instead of static code, runtime code generation provides an opportunity to dynamically add optimizations in code based on runtime conditions of the system.
 
-\item \textbf{PET Scan} - Positron Emission Tomography produces a 3-dimensional detailed image of the body and is helpful in identifying the degree of metastasis of cancer to breast and other parts of the body. This is key in identifying the extent of surgical procedure and type of therapies to be used for treatment. However, this is an expensive test and requires high-end equipment not reachable to most less-privileged populations.
+\subsection{Key concept and Ideas for performance enhancement}
 
-\end{enumerate}
+The paper \cite{synthesis92} introduces run time code generation to optimize kernel performance. The technique benefits from more information regarding the execution and the environment during runtime. 
 
-As stated earlier, this report focusses on AI/xAI techniques applied on Mammography images which is easy to obtain through mass-screening efforts. The availability of diverse data helps in developing effective AI models with explainability.
-
-\section{Mass Screening and Evaluation Efforts}
-
-\subsection{The Challenges}
-
-Designing AI systems for Breast Cancer detection and analysis is faced with the following challenges:
-
-\paragraph{Data availability} Training and developing an effective model requires huge number of Mammography images with various demographic characteristics.
-
-\paragraph{Follow-up} To develop early-detection models, its necessary to follow-up patients that are screened to verify if they develop cancer. The gap between the first screening and the follow-up also needs to be decided. 
-
-\paragraph{Geographical Differences} Even with available data, the screening results from different geographic regions differ. There are also difference across various racial profiles of patients and their environment. Such discrepancies influence the models and therefore the predictions produced by such models
-
-\paragraph{Anonimity and Privacy} Different privacy regulations in different regions prevents obtaining screening data and also follow-up.
-
-Some of the efforts undertaken by various organizations in obtaining useful mammography data and application of AI methods for cancer detection are listed below.
+\subsection{Runtime Code generation and Optimization}
 \begin{itemize}
-\item CAMELYON Challenge (periodically) - Challenges to invent accurate prediction models for cancer detection from images
-\item Dream2016 Digital Mammography - Mass screening for Mammography data
-\item PASCAL VOC 2009 - Anonymous mammography images
+\item{Runtime Code Generation}
 \end{itemize}
 
-\subsection{Evaluation Data Sets}
-The AI system evaluation presented in \cite{Nature577} analyses screening mammography image datasets from patiensts in the US and the UK. Table \ref{screening} is a comparitive table of the datasets from the two regions.
+\section{Traditional Optimization Strategies}
+This section revisits some of the traditional optimization strategies at the level of Assembly language to fully utilize processor capabilities. Most general purpose and specialized processors implement multi-stage instruction pipelines. The most common issue in the pipelines is pipeline stalls. This happens when an instruction has to wait for another instruction to pass a certain stage. For example, a Mov instruction waits for the previous Add instruction to write to the register which is used in the Mov instruction. Several optimization techniques are deviced to avoid such stalls. 
 
-\begin{table}
-  \caption{Breast cancer screening datasets - US and UK (Source: Nature577:89-94,2020)}
-  \label{screening}
-  \centering
-  \begin{tabular}{lll}
-    \toprule
-    Parameter        &  UK       &     US  \\
-    \midrule
-    Dataset Size     & 25856     &    3097     \\
-    Biopsied         & 785       &    1511    \\
-    Follow-up        & 39 months &    27 months  \\
-    Cancer Positive  & 414       &    686  \\
-    Sensitivity over human readers & 2.7\% & 9.4\%  \\
-    Specificity over human readers & 1.8\% & 5.7\%  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection{The Ground truth determination and Evaluation}
-
-\begin{itemize}
-\item Positive if biopsy-confirmed within 3 months from after the screening interval
-\item Otherwise negative if a second exam occured before the screening interval
-\item Compare performance against clinician read results
-\item Generalization of data sets by training on UK Training set and testing on US test set
-\item 6 radiologists read 500 cases from US test set independent of each other. The clinicians assign a BI-RADs score to determine the effectiveness of the reading.
-\item The AI system used three deep learning models analysing at various levels producing a cance-risk score of 0 to 1.
-\end{itemize}
-
-The figure \ref{aieval} shows the sensitivity and specifity improvements of AI system over traditional systems. 
-
-\begin{figure} [ht]
-  \centering
-  \tcbox{\includegraphics[width=0.95\textwidth]{images/aisystemparams.png}}
-    \caption{Evaluation of detection results from Breast Cancer screening}
-    \caption*{Source: Nature 577:89-94. 2020}
-  \label{aieval}
+\begin{figure}[h]
+  \includegraphics[width=0.45\textwidth]{pipelines}
+  \caption{Wikipedia, the free encyclopedia, “Atomic force microscopy,” https://en.wikipedia.org/wiki/File:Fivestagespipeline.png}
+  \Description{Stages for instruction queue in common processors}
 \end{figure}
 
 
-\subsection{Results from screening and evaluation}
+\subsection{Avoid Decision statements}
 
-When mammography images are available in a considerable number along with the follow-up results, it could be possible to develop and train effective AI models. These models show significant improvement in detection compared to manual effort and can be applied across geographies. The AI system significantly reduces false positives and false-negatives. During the evaluation, there were few cases that were missed by the AI system and detected by clinician reading and also found were cases which were missed by clinicians but discovered by the AI system. However, the evaluation reduced the effort by second readers by upto 88\% which is a significant contribution owing to shortage of clinical professionals. This evaluation provides an evidence that improvements in AI systems in Breast Cancer Detection and Analysis is useful in making cancer cures more accessible and hence encourages further research and development.
+Conditional statements like 'if....else...' translate in assembly to a set of JMP instructions. The JMP instructions require a few additional steps like storing the current Program Counter and updating the Stack Pointer so that the program can resume graceful execution when the control returns to the point from where the JMP was called. These additional steps cost CPU cycles and when possible should be avoided. Several hacks are available to counter these through Arithmetic and Logical operations to obtain results similar to what the conditional statements do. 
+In case it is impossible to remove the conditional statements, there should at least be an effort to move the condition statements out of a loop construct so that the overheads related to JMP instruction are not repeated several times. 
 
-The predictions produced in the described and other AI systems are based on black-box deep neural network models with several layers. In order to fully adapt AI methods in clinical processes, the clinicians demand clear explanations on the reasons for prediction. Also, along with prediction, there is also a need for classification and staging of cancer for effective treatments. This can be achieved using Explainable AI systems. The section \ref{xaixgboost} presents a technique derived from backpropagation to help identify and classify the micro-environment that significantly contribute to cancer development and the section \ref{xaiductal} provides a method to help in early-detection(stage 0) of cancer from mammographs using a well-known mathematical technique.
+Example:
+\begin{verbatim}
+    int maximum(int a, int b) {
+        if (a > b)
+            return a;
+        else
+            return b;
+    }
+\end{verbatim}
+Can be replaced by:
+\begin{verbatim}
+    int maximum(int a, int b) {
+        return -(((b - a) >> 31)*a + ((a - b) >> 31)*b);
+    }
+\end{verbatim}
 
+Several modern compilers are now capable of replacing such conditional statements with logical and arithmetic instructions.
 
-\section{Explainable AI to study Tumor-Micro Environment}
-\label{xaixgboost}
+\subsection{Precompute Constants and Constant Expressions}
 
-\subsection{Background}
+Sometimes, code can contain variables that for certain use-cases are not subject to change. Such variables should be eliminated and replaced with constants and constant expressions. For the purpose of clarity, such constants can be implemented using Macros which are computed during compilation. 
 
-An important aspect of effective cancer care for breast cancer patients is to identify the type of cancer and the biological factors that influence the development of cancers. Particularly there are 4 types of breast cancers:
+\subsection{Procedure Inlining}
+Similar to Conditional instructions, procedure calls involves several intermediate steps like storing the program counter, updating the stack pointer and then calling a JMP instruction to the procedure being called and a similar set of steps while returning to the caller. This can be avoided with procedure inlining. Procedure inlining provides an elegant way of structuring the code in a modular fashion while not losing the performance gain by executing the instructions in sequence without the overhead of function call. This is generally accomplished by either a prefix for the procedure definition or an annotation placed before the procedure depending on the type of higher-level language used. 
+
+\subsection{Loop Unrolling}
+Loops are often the most compute-intensive sections of the code. Pipeline stalls in loops can be hazardous for the performance of programs since the delay is multiplied by the number of iterations. Hence avoiding pipeline stalls in loops is extremely critical. Loop unrolling is done in three steps:
 \begin{enumerate}
-\item Estrogen Receptors (ER)
-\item Progesterone Receptors (PR)
-\item Human Epidermal growth factor Receptor 2(HER2)
-\item Triple Negative Breast Cancer (TNBC) ( a combination of all the three above)
+\item{Preload registers that are used in computation}
+\item{Precompute one sample before the loop begins}
+\item{Align compute of older samples with loading of new samples to avoid pipeline stalls}
 \end{enumerate}
+The method best illustrated in the program below. Note that though this technique optimizes the loop, it is based on the assumption that the processor has enough registers available at this point to be utilized in the loop.
 
-The cells living in the breast and surrounding tissues like T,B Lymphocytes, CD4+T cells, CD8+T cells, and several harmones that influence the development of breast cancer constitute the Tumor Micro Environment (TME). Along with the type of cancer, it is also important to understand the TMEs that contribute to cancer development. This will help identify the risk of cancer and also survivability of patients past treatment at an early stage. 
-\cite{cancers2021} presents an xAI method that helps identify the TME factors that has significant contributions and thereby giving new insights into pre-detection of cancer and therefore allow for precautionary and preventive measures for patients with higher risks. The technique described in \ref{xgboost} uses datasets from http://www.cbioportal.org/ and https://gdac.broadinstitute.org/ .
+\begin{verbatim}
+    Loop :
+        load R1,(R6)
+        load R2,(R6+1)
+        mac R1,R2,R3      //..2 t i c k s
+        store R3,(R9)
+        add R6,2
+        inc R7
+    EndLoop
+\end{verbatim}
 
-\subsection{XGBoost method - The experiment and result}
-\label{xgboost}
-XGBoost is a tree-based search algorithm that searches for the best outcome. The outcome is defined to be 5-year survival rate which is given by:
+The unrolled version is as below:
 
-\begin{equation}
-\hat{y} = \phi(x) = \frac{1}{n}\sum_{k=1}^{n}f_k(x)
-\end{equation}
-
-Where, \(\hat{y}\) is the predicted outcome - overall survival and 5-year survival (\(1\leq{k}\leq{n}\)) and \(f_1, f_2, \ldots, f_n\) are functions learned by \(n\)
-(\cite{cancers2021})
-
-The learning functions aim at minimizing the value of a regularized objective based on the gap between the outcome and predicted outcome given by:
-
-\begin{equation}
-\mathcal{L}(\phi) = \sum_{i} l(\hat{y} - y) + \sum_{k} \Omega(f_k)
-\end{equation}
-
-Where, an extra regularization term \(\Omega\) is used to a penalize tree overgrowth and avoid overfitting given by:
-
-$$ \Omega(f_k) = \gamma T + \frac{1}{2} \lambda ||w||^2 $$
-
-And,
-
-\(l\) - is the differentiable convex loss function – measures the difference between predictions\\
-\(T\) - is the number of leaves in a tree\\
-\(\lambda\) - is the penalty parameter\\
-\(||w||\) - is the vector of scores on the leaves\\
-\(\gamma\) - is the complexity of the leaf\\
-
-Without the \(\Omega\) term, the equation(2) returns the standard gradient term that looks like:
-
-\begin{equation}
-\mathcal{L}(\phi) = \sum_{i} l(\hat{y} - y)
-\end{equation}
+\begin{verbatim}
+    load R1, (R6)
+    load R2, (R6+1)
+    add R6, 2
+    Loop:  
+        load R4, (R6)
+        mac R1, R2, R3 ..2ticks
+        load R5, (R6+1)
+    
+        add R6, 2
+        store R3, (R9)
+    
+        load R1,(R6)
+        mac R4, R5, R7
+        load R2, (R6+1)
+    
+        add R6, 2
+        store R7, (R9)
+        inc R9
+    Endloop
+\end{verbatim}
 
 
-\paragraph{SHAP} is a game-theory based approach used to model the contribution of each feature towards the final outcome and is determined by the Shapely values assigned to each feature. In effect, SHAP computes the average marginal contribution of each feature across all possible combinations of features. The larger the Shapely value, the greater the impact of the feature on the 5-year survivability of the patient. The plot in figure \ref{xgboostres} sorts the feature in the decreasing order of Shapely values.
+\subsection{Utilize Special Architecture Capabilities}
+Some processors also come with specialized hardware in the form of co-processors, special Multiply-Accumulate units, fast I/O units and others. The compilers may not fully utilize these special facilities provided for the processor. Such handling requires customization of the compilers or disabling compiler optimization and manually modifying sections of code to utilize the capabilities better. For example, most multimedia SOCs provide an additional DSP or a Co-Processor for specialized computation and they can do computations independent of the registers and ALU of the main processors. The compiler may not take advantage of such feature while optimizing and hence require manual intervention by specialist programmers.
 
-\begin{figure}
-  \centering
-  \tcbox{\includegraphics[scale=0.25]{images/xgboostresults.png}}
-    \caption{XGBoost results in the decreasing order of shapely values for each TME feature}
-    \caption*{Source: Chakraborty et.al, Cancers 2021, 13, 3450.}
-  \label{xgboostres}
-\end{figure}
-
-\paragraph{Insight} Observing the Shapely values in figure \ref{xgboostres}, the experiment concluded that B cells, M0 Macrophages, CD8+ T Cells, and NK T Cells play significant role in determining survivability of patients. A precise contribution threshold values were also determined for each type of TME as shown in figure \ref{xgbooststat} .
-
-\begin{figure}
-  \centering
-  \tcbox{\includegraphics[scale=0.25]{images/shapresults.png}}
-    \caption{Contribution by each cell based on Shapely values}
-    \caption*{Source: Chakraborty et.al, Cancers 2021, 13, 3450.}
-  \label{xgbooststat}
-\end{figure}
-
-In conclusion, xAI methods simlar to the one shown here can also be used in improving the knowledge around the causes and spread of cancer which help in prognosis and treatment.
+In such scenarios, the specialists have advanced knowledge of the Instruction architecture of the processor and the special-purpose processors. They decide on which part of the code shall be executed on the processor and which part would be redirected towards special purpose processors. The special purpose processors could be Signal processors, controllers or just a coprocessor with additional MAC units to enable parallel processing. The programmer can use a switch like \#pragma to separate code that should run on the special purpose processor. In such optimizations, each main processor instruction is coupled with one co-processor instruction that is independent of the main processor instruction and are executed in parallel. 
 
 
-\section{Early Detection through xAI Techniques}
-\label{xaiductal}
+\section{Superoptimization}
 
-\subsection{Introducing Ductal Carcinoma}
-
-\textbf{Ductal Carcinoma In Situ} refers to Stage-0 breast cancer which begins in the ductal area of the breast and has yet no signs of \textit{metastasis} (\textit{metastasis} refers to the extent of spread of cancer in the body). The drawing in figure \ref{ductal} shows the inflection point of such a cancer growth ( \cite{dcis2021} ). 
-
-\begin{figure} [!ht]
-  \centering
-  \includegraphics[scale=0.35]{images/ductal1.png}
-    \caption{Development of Ductal Carcinoma in Situ}
-    \caption*{Source: https://www.cancer.org/cancer/breast-cancer/about/types-of-breast-cancer/dcis.html}
-  \label{ductal}
-\end{figure}
+The concept of superoptimization 
 
 
-A stage-0 cancer can be treated with minimal risk and high survivability with simple surgical procedure followed by medication. The ghastly effects of Chemotherapy, Immunotherapy and Radiotherapy treatments employed at later stages can be avoided. However, detection of cancer at search early stage is challenging and particularly so if it is done through mammography and not by using PET scan or biopsy which are expensive.
+\subsection{Understanding Superoptimization}
 
-The paper \cite{insitu2021} presents an xAI approach to detect cancer at such a nascent stage.
+\subsubsection{The Method}
 
-\subsection{The method}
+\subsubsection{Limitations}
 
-The technique uses a method of backpropagation called Layerwise Relevance Propagation which redistributes the input image at each layer backwards. The redistribution uses the formula:
+\subsubsection{Applications}
 
-\begin{equation}
-\R_{j} = \sum_{k} \frac{x_j w_{j,k}}{\sum_k x_j w_{j,k} + \epsilon} \R_{k}
-\end{equation}
-
-The application of relevance propogation algorithm is shown in figure \ref{relevance}
-
-\begin{figure} [ht]
-  \centering
-  \includegraphics[scale=0.5]{images/lrpalgorithm.png}
-    \caption{Layerwise Relevance Propagation Algorithm}
-    \caption*{Source: https://danshiebler.com/2017-04-16-deep-taylor-lrp/}
-  \label{relevance}
-\end{figure}
-
-A suitable vector-valued relevance propagation function should be defined that can backpropagate to the input to produce a heat map around the most significant features that contributed to the outcome at each layer. \cite{bach2015} lists several constraints on such a relevance function
-
-However, \cite{insitu2021} uses \textbf{Deep Taylor Decomposition} as a relevance funcion. This is based on the Taylor series expansion that approximates the value of a function around a root point and to ease the process, sets the root point to 0 resulting in the simplified Taylor series as shown in figure \ref{taylor1} and \ref{taylor2}. The blog \cite{schiebler17} provides a simpler explanation of the Deep Taylor approach to Layerwise Propagation technique.
-\begin{figure} [ht]
-  \centering
-  \includegraphics[scale=0.25]{images/dtlrpeqn1.png}
-    \caption{Original Taylor Series Expansion}
-    \caption*{Source: https://danshiebler.com/2017-04-16-deep-taylor-lrp/}
-  \label{taylor1}
-\end{figure}
-\begin{figure} [ht]
-  \centering
-  \includegraphics[scale=0.25]{images/dtlrpeqn2.png}
-    \caption{Approximated Taylor Series Expansion with root point set to 0}
-    \caption*{Source: https://danshiebler.com/2017-04-16-deep-taylor-lrp/}
-  \label{taylor2}
-\end{figure}
-
-The root points are located around the edges of decision points and therefore the gradient around these points give maximum information about the classification and give better approximation (explanation from \cite{schiebler17}).
-
-The application of Deep Taylor Approximation for Layerwise Relevance Propagation is shown in figure \ref{dtlrptech} .
-
-\begin{figure} [ht]
-  \centering
-  \tcbox{\includegraphics[scale=0.35]{images/dtlrptechnique.png}}
-    \caption{Deep Taylor Decomposition with LRP}
-    \caption*{Source: M. La Ferla et. al arxiv eess.IV 2021}
-  \label{dtlrptech}
-\end{figure}
-
-\clearpage
-\subsection{Results in Breast Cancer Detection}
-
-\cite{insitu2021} shows the result of applying Deep Taylor Decomposition on Layerwise Relevance Propagation on breast cancer patients. It classifies the images into 3 types based on the presence of cancer cells as Normal, Benign and Malignant. The presence of cancer cells is marked in a different color on the heatmap and this was possible through relevance propogation. 
-The input images were used with Resnet-50 patch classifier and the explanation was provided using the Deep Taylor LRP method in the form of heat map images. 
-
-The evaluation presented in \cite{insitu2021} says that Deep Taylor LRP can be applied on CNN for providing clinically relevant explanations for images classfied by ReLU activation functions. However, the performance is not satisfactory. But, they also provide evidence that other methods are less performant compared to Deep Taylor LRP and therefore recommend further research into the area.
+\subsection{Peephole Superoptimizers}
 
 
-\section{Conclusion and Remarks}
+\section{Superoptimizers in Modern Compilers}
 
-Breast cancer being the most dominant of all terminal diseases among women, calls for improved diagnosis, prognosis and treatment methods. Traditional methods require investment in equipment like PET scan and more clinical professionals as manual reading of images from mammograph or slide images are time-consuming and prone to error. AI methods offer an alternative to improve breast cancer care in several aspects. The following conclusions can be derived: 
+\section{Other Related Works and Future Direction}
 
-\begin{enumerate}
-\item Mass screening can help develop accurate well-trained AI models which can be used by AI system to analyze new images thereby reducing the load on medical professionals. 
-\item Achieve improved accuracy due to lesser human error and quicker results
-\item XAI methods on huge datasets can provide insights into the TME features that cause cancer and also provide anlaysis on survival rates of patients
-\item XAI methods with more research and improvements can be employed in clinical trials for detecting cancer at very early stages enabling preventive measures for patients involving risks.
-\item The xAI models particularly the relevance models for explaining In Situ cancer are not as performant as they need to be and advanced research into other possible relevance functions and alternative methods of explainable AI to improve confidence among clinical professionals.
-\end{enumerate}
 
-\clearpage
-\section{Declaration of Authorship}
+\section{Conclusions}
 
-\begin{figure} [ht]
-  \includegraphics[width=1.2\textwidth,left]{images/authorship.png}
-\end{figure}
-
-\clearpage
-\bibliography{bibliography}
-\bibliographystyle{abbrvnat}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{acmart.bib}
 
 \end{document}
