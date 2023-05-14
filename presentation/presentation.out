@@ -1,9 +1,10 @@
 \BOOKMARK [2][]{Outline0.1}{}{}% 1
 \BOOKMARK [2][]{Outline0.2}{Introduction}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Simple Assembly language Optimization Techniques}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Learnings from Synthesis kernel and OS}{}% 4
-\BOOKMARK [2][]{Outline0.5}{Introducing SuperOptimizers}{}% 5
-\BOOKMARK [2][]{Outline0.6}{Peephole Superoptimizers and Modern Compilers}{}% 6
-\BOOKMARK [2][]{Outline0.7}{Conclusion}{}% 7
-\BOOKMARK [2][]{Outline0.8}{}{}% 8
-\BOOKMARK [2][]{Outline0.9}{References}{}% 9
+\BOOKMARK [2][]{Outline0.3}{Learnings from Synthesis OS Kernel}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Code-Level Optimizations}{}% 4
+\BOOKMARK [2][]{Outline0.5}{SuperOptimizers}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Peephole SuperOptimizers}{}% 6
+\BOOKMARK [2][]{Outline0.7}{SuperOptimizers in Modern Compilers}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Conclusions and Future Work}{}% 8
+\BOOKMARK [2][]{Outline0.9}{}{}% 9
+\BOOKMARK [2][]{Outline0.10}{References}{}% 10

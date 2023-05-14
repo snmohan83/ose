@@ -1,17 +1,1 @@
-\usepackage[%
-        shash={e5ff9ed},
-        lhash={e5ff9edf140c1d2e4e7634bbc962e1081eca6966},
-        authname={Madhu Mohan Nelemane},
-        authemail={sridhara-madhu-mohan.nelemane@t-systems.com},
-        authsdate={2022-08-14},
-        authidate={2022-08-14 23:07:17 +0200},
-        authudate={1660511237},
-        commname={Madhu Mohan Nelemane},
-        commemail={sridhara-madhu-mohan.nelemane@t-systems.com},
-        commsdate={2022-08-14},
-        commidate={2022-08-14 23:07:17 +0200},
-        commudate={1660511237},
-        refnames={ (HEAD -> master)},
-        firsttagdescribe={e5ff9ed},
-        reltag={e5ff9ed}
-    ]{gitexinfo}
+./.git/gitHeadInfo.gin

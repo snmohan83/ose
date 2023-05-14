@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.21)  15 SEP 2022 02:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.21)  23 DEC 2022 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1780,7 +1780,18 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ))
 \mybox=\box166
 
-(./meta/config/hyphenation.tex) (./presentation.aux)
+(./meta/config/hyphenation.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/sauerj/parcolumns.sty
+Package: parcolumns 2004/11/25 v1.2 Typeset multiple parallel columns
+
+(/usr/share/texlive/texmf-dist/tex/latex/sauerj/processkv.sty
+Package: processkv 2004/08/09 v1.0.1 process key=value lists
+)
+\pc@columnctr=\count403
+\pc@columncount=\count404
+\pc@everypar=\toks67
+)
+(./presentation.aux)
 \openout1 = `presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -1860,17 +1871,17 @@ LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count403
+\scratchcounter=\count405
 \scratchdimen=\dimen367
 \scratchbox=\box167
-\nofMPsegments=\count404
-\nofMParguments=\count405
-\everyMPshowfont=\toks67
-\MPscratchCnt=\count406
+\nofMPsegments=\count406
+\nofMParguments=\count407
+\everyMPshowfont=\toks68
+\MPscratchCnt=\count408
 \MPscratchDim=\dimen368
-\MPnumerator=\count407
-\makeMPintoPDFobject=\count408
-\everyMPtoPDFconversion=\toks68
+\MPnumerator=\count409
+\makeMPintoPDFobject=\count410
+\everyMPtoPDFconversion=\toks69
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1893,7 +1904,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count409
+\c@section@level=\count411
 )
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
@@ -1947,7 +1958,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.9).
 
-\c@lstlisting=\count410
+\c@lstlisting=\count412
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 35.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 35.
 (./presentation.nav)
@@ -1973,65 +1984,131 @@ png>] (./presentation.toc) [2
 
 ] [6
 
-] [7
-
-] [8
-
-] [9
-
-] [10
-
-] [11
-
-] [12
-
 ]
-(./presentation.bbl
-LaTeX Font Info:    Trying to load font information for T1+futs on input line 4
-2.
- (/usr/share/texlive/texmf-dist/tex/latex/fourier/t1futs.fd
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <9> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 3.
+LaTeX Font Info:    Trying to load font information for T1+futs on input line 1
+3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
- 42.
+ 13.
+
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 42.
+(Font)              scaled to size 8.27998pt on input line 13.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 42.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+(Font)              scaled to size 6.99199pt on input line 13.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 42
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 13
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 42
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 13
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 42.
+(Font)              scaled to size 8.27998pt on input line 13.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 42.
-) [13
+(Font)              scaled to size 6.99199pt on input line 13.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 13.
+) [7
+
+]
+<./meta/config/images/fivestagespipeline.png, id=205, 301.125pt x 87.32625pt>
+File: ./meta/config/images/fivestagespipeline.png Graphic file (type png)
+<use ./meta/config/images/fivestagespipeline.png>
+Package pdftex.def Info: ./meta/config/images/fivestagespipeline.png  used on i
+nput line 170.
+(pdftex.def)             Requested size: 295.9098pt x 85.82164pt.
+ [8
+
+ <./meta/config/images/fivestagespipeline.png>]
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 13.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 13.
+)
+Overfull \vbox (4.82956pt too high) detected at line 208
+ []
+
+[9
+
+]
+<./meta/config/images/superoptimizer.png, id=239, 823.075pt x 511.9125pt>
+File: ./meta/config/images/superoptimizer.png Graphic file (type png)
+<use ./meta/config/images/superoptimizer.png>
+Package pdftex.def Info: ./meta/config/images/superoptimizer.png  used on input
+ line 216.
+(pdftex.def)             Requested size: 295.9098pt x 184.0384pt.
+
+Overfull \vbox (27.36797pt too high) detected at line 216
+ []
+
+[10
+
+ <./meta/config/images/superoptimizer.png>] [11
+
+]
+<./meta/config/images/autosuperopt.png, id=271, 793.96625pt x 382.42876pt>
+File: ./meta/config/images/autosuperopt.png Graphic file (type png)
+<use ./meta/config/images/autosuperopt.png>
+Package pdftex.def Info: ./meta/config/images/autosuperopt.png  used on input l
+ine 240.
+(pdftex.def)             Requested size: 295.9098pt x 142.53511pt.
+
+Overfull \vbox (10.30461pt too high) detected at line 240
+ []
+
+[12
+
+ <./meta/config/images/autosuperopt.png>]
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb) [13
 
 ] [14
+
+]
+(./presentation.bbl
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 26.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 32.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 32.
+) [15
+
+] [16
 
 ]
 \tf@nav=\write7
@@ -2043,38 +2120,47 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 \tf@snm=\write9
 \openout9 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
-
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
+ (./presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 8E666A5B14A69968ED9309FB0706AE62;505.
+(rerunfilecheck)             Checksum: B6569B0EAA6A690BE1D0FE926C5CE6AE;533.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 47143 strings out of 483016
- 1065744 string characters out of 5961285
- 1697406 words of memory out of 5000000
- 61006 multiletter control sequences out of 15000+600000
- 574857 words of font info for 90 fonts, out of 8000000 for 9000
+ 47851 strings out of 483016
+ 1074628 string characters out of 5961285
+ 1778496 words of memory out of 5000000
+ 61671 multiletter control sequences out of 15000+600000
+ 604198 words of font info for 131 fonts, out of 8000000 for 9000
  84 hyphenation exceptions out of 8191
- 73i,23n,123p,984b,1039s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/mmohan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0500.60
-0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on presentation.pdf (14 pages, 127051 bytes).
+ 73i,23n,123p,984b,1436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/mmohan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.60
+0pk> </home/mmohan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0500.
+600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fouri
+er-ms.pfb>
+Output written on presentation.pdf (16 pages, 253975 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

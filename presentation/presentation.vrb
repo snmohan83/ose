@@ -1,0 +1,15 @@
+\frametitle{GNU Superoptimizer}
+\begin{itemize}
+        \item Gives the shortest instruction sequence
+        \item Available as an installable package
+        \item Supports multiple CPU Architectures
+        \item SPARC, MC68000, MC68020, M88000, POWER, POWERPC, AM29K, I386, I960 (for i960 1.0), I960B (for I960B 1.1), PYR, ALPHA, HPPA, SH
+    \end{itemize}
+    To compile and run the superopt on a GNU Machine
+    \begin{lstlisting}[backgroundcolor=\color{lightgray}]
+        > make CPU=-D<cpu_name_from_list> superopt
+        >
+        > superopt -f<goal-function> | -all  [-assembly]
+        [-max-cost n] [-shifts] [-extracts] [-no-carry-insns]
+        [-extra-cost n]
+    \end{lstlisting}

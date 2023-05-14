@@ -1,8 +1,9 @@
 \babel@toc {ngerman}{}
 \babel@toc {english}{}
 \beamer@sectionintoc {2}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {3}{Simple Assembly language Optimization Techniques}{4}{0}{2}
-\beamer@sectionintoc {4}{Learnings from Synthesis kernel and OS}{5}{0}{3}
-\beamer@sectionintoc {5}{Introducing SuperOptimizers}{7}{0}{4}
-\beamer@sectionintoc {6}{Peephole Superoptimizers and Modern Compilers}{8}{0}{5}
-\beamer@sectionintoc {7}{Conclusion}{12}{0}{6}
+\beamer@sectionintoc {3}{Learnings from Synthesis OS Kernel}{4}{0}{2}
+\beamer@sectionintoc {4}{Code-Level Optimizations}{6}{0}{3}
+\beamer@sectionintoc {5}{SuperOptimizers}{10}{0}{4}
+\beamer@sectionintoc {6}{Peephole SuperOptimizers}{12}{0}{5}
+\beamer@sectionintoc {7}{SuperOptimizers in Modern Compilers}{13}{0}{6}
+\beamer@sectionintoc {8}{Conclusions and Future Work}{14}{0}{7}

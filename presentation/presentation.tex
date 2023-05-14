@@ -1,5 +1,5 @@
 %===============================================================================
-% Zweck:    KTR-Präsentation-Vorlage
+% Zweck:    OSE-Präsentation-Vorlage
 % Erstellt: 15.04.2013
 % Update:   04.07.2016
 % Autor:    M.G.
@@ -26,12 +26,12 @@ compress
   {\signed{\usebox\mybox}\end{fancyquotes}}
 
 
-
 \input{\meta/config/hyphenation}
 
 \setbeamertemplate{caption}[numbered]
 %\numberwithin{figure}{section}
-
+\usepackage{listings}
+\usepackage{parcolumns}
 \begin{document}
   %===============================================================================
   % Zum Kompilieren latexmk ausführen.
@@ -89,56 +89,192 @@ compress
 %%%%%%%%%% Content starts here %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section{Introduction}
 \begin{frame}{Introduction}
-This presentation talks about superoptimization
+    \begin{itemize}                                                                             
+        \item The Synthesis Kernel \cite{synthesis} introduces runtime code generation as one of the key ideas for an efficient operating system.
+        \item Runtime Code generation enables optimization
+        \item \cite{synthesis} proposes common optimization techniques like - constant folding, constant propagation and procedure inlining
+        \item The Kernel and the subsequent paper on Superoptimizer by Henry Massalin tend to achieve the goal of aiding the expert to optimize better.
+    \end{itemize}
 \end{frame}
-\section{Simple Assembly language Optimization Techniques}
-\begin{frame}{Assembly}
-\begin{itemize}
-\item Replace decision constructs with logical and arithmetic operations
-\item Unroll loops to avoid pipeline dependencies
-\item Parallelize Load/Store with MAC instructions
-\end{itemize}
+
+\section{Learnings from Synthesis OS Kernel}
+\begin{frame}{Synthesis OS Kernel} 
+    \begin{itemize}
+        \item Synthesis optimized code for frequently used Kernel routines - queues, buffers, switchers, interrupt handlers, system call dispatchers
+        \item Fine-grained scheduling - Deduce CPU time for each task through measurement and data accumulation
+        \item Tackling the goal of high throughput with low latency
+        \item Optimization through design changes in various functions of the kernel - Diffuse Kernel, I/O, process management, services and interfaces
+    \end{itemize}
 \end{frame}
-\section{Learnings from Synthesis kernel and OS}
-\begin{frame}{Optimizations in Synthesis Kernel}
-\begin{itemize}
-\item Dynamic Code Generation
-\item Software Feedback
-\end{itemize}
-\end{frame}
+
 
 \begin{frame}{Optimizations from Synthesis OS}
-
+    \begin{itemize}
+        \item Constant Folding, Constant Propagation and Procedure Inlining are used
+        \item Data-aware optimizations using information available at compile-time
+        \item TradeOff: Cost saving must exceed code generation cost
+        \item Methods used by Synthesis for code generation:
+            \begin{itemize}
+                \item Facoring invariants - partial evaluation for constraints
+                \item Collapsing Layers - similar to inlining reaching multiple layers
+                \item Executable Data structures - self-traversing - Jobqueue with Startjob and Stopjob sequences
+            \end{itemize}
+        \item Challenges: Size, Protection and Cache Coherence
+    \end{itemize}
 \end{frame}
 
-\section{Introducing SuperOptimizers}
-\begin{frame}{Basic Superoptimizer steps}
-\begin{itemize}
-\item Boolean Test
-\item Probabilistic Test
-\item Pruning
-\item Applications and Limitations
-\end{itemize}
+
+\section{Code-Level Optimizations}
+
+\begin{frame}{Traditional Optimization Tricks}
+Earlier processors had constraints of memory and CPU cycles and every cycle and pipeline stalls mattered. 
+
+Imagine running a video decoding application on a 16 KB RAM and 128 Mhz CPU.
+\bigskip
+    \begin{enumerate}
+        \item Replace decision constructs with logical and arithmetic operations
+        \item Utilize processor's parallel processing capabilities avoiding pipeline stalls
+          \begin{itemize}
+            \item Unroll loops to avoid pipeline dependencies
+            \item Algorithmic changes to parallelize Load/Store with MAC instructions      
+          \end{itemize}
+        \item Precompute constants and constant expressions
+        \item Inline smaller frequently called functions/procedures 
+    \end{enumerate}
+    The last two ideas were also mentioned in \cite{synthesis}
 \end{frame}
 
-\section{Peephole Superoptimizers and Modern Compilers}
+\begin{frame}[fragile]{Some Examples of Code-level Optimizations}
+  \begin{lstlisting}[backgroundcolor=\color{lightgray}]
+    int maximum(int a, int b) {
+        if (a > b)
+            return a;
+        else
+            return b;
+    }
+  \end{lstlisting}
+  Can be replaced by:
+  \begin{lstlisting}[backgroundcolor=\color{lightgray}]
+    int maximum(int a, int b) {
+        return -(((b - a) >> 31)*a + ((a - b) >> 31)*b);
+    }
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Pipeline Stages and Loop Unrolling}
+This is a sample set of processor pipeline stages of a RISC processor and can be different for other CPUs.
+Assumption: Each instruction takes 1 cycle unless otherwise mentioned.
+\image{0.8\textwidth}{\meta/config/images/fivestagespipeline.png}{Pipeline Stages RISC from Wikipedia on RISC Pipeline \cite{WikipediaEN:RISC} }{img: fivestagespipeline}
+\end{frame}
+
+\begin{frame}[fragile]{Loop Unrolling Example}
+\noindent\begin{minipage}{.45\textwidth}
+  \begin{lstlisting}[backgroundcolor=\color{lightgray}]
+    Loop:
+      load R1, (R6)
+      load R2, (R6+1)
+      mac R1, R2, R3  ..2ticks
+      store R3, (R9)
+      add R6, 2
+      inc R7 
+    EndLoop
+  \end{lstlisting}
+\end{minipage} \hfill
+\begin{minipage}{.45\textwidth}
+  \begin{lstlisting}[basicstyle=\small, backgroundcolor=\color{lightgray}]
+    load R1, (R6)
+    load R2, (R6+1)
+    add R6, 2
+    Loop:  
+      Load R4, (R6)
+      mac R1, R2, R3 ..2ticks
+      Load R5, (R6+1)
+    
+      add R6, 2
+      store R3, (R9)
+    
+      Load R1,(R6)
+      mac R4, R5, R7
+      Load R2, (R6+1)
+    
+      add R6, 2
+      store R7, (R9)
+      inc R9
+    Endloop
+  \end{lstlisting}
+\end{minipage}
+\end{frame}
+
+
+\section{SuperOptimizers}
+
+\begin{frame}{Superoptimizer Methods}
+Goal: Given an instruction set, search for the smallest program for a task. Introduced first by Henrz Massalin \cite{superopt}.
+\image{0.8\textwidth}{\meta/config/images/superoptimizer.png}{Superoptimizer Methods}{img: superoptimizer}
+\end{frame}
+
+\begin{frame}{Limitations and Applications}
+  \begin{itemize}
+    \item Exponential growth of search time with instruction set (several hours)
+    \item Modeling a pointer is difficult (take whole memory into account)
+    \item Machine-independence
+  \end{itemize}
+  \begin{itemize}
+    \item Effective in register-register operations
+    \item Design of RISC architectures
+    \item For program snippets overlooked by compiler (eg> multiplication by constants)
+    \item Best used to aid assembly language programmers
+  \end{itemize}
+\end{frame}
+
+\section{Peephole SuperOptimizers}
 \begin{frame}{Automatic Generation of Peephole Superoptimizers}
+    \begin{itemize}
+        \item Peephole optimizers replace sequence of instructions with faster sequence
+        \item Utilizes pattern-matching to decide rules - Automation to use superoptimization
+        \item implemented as a network-based search engine on a database of learned optimizations
+    \end{itemize}
+\image{0.8\textwidth}{\meta/config/images/autosuperopt.png}{Architecture of automated SuperOptimizer \cite{PeepholeAutogen}}{img: autosuperopt}
 \end{frame}
-\begin{frame}{Improving Binary Translations using Peephole superoptimizers}
+
+
+\section{SuperOptimizers in Modern Compilers}
+\begin{frame}[fragile]{GNU Superoptimizer}
+    \begin{itemize}
+        \item Gives the shortest instruction sequence
+        \item Available as an installable package 
+        \item Supports multiple CPU Architectures
+        \item SPARC, MC68000, MC68020, M88000, POWER, POWERPC, AM29K, I386, I960 (for i960 1.0), I960B (for I960B 1.1), PYR, ALPHA, HPPA, SH
+    \end{itemize}
+    To compile and run the superopt on a GNU Machine
+    \begin{lstlisting}[backgroundcolor=\color{lightgray}]
+        > make CPU=-D<cpu_name_from_list> superopt
+        >
+        > superopt -f<goal-function> | -all  [-assembly] 
+        [-max-cost n] [-shifts] [-extracts] [-no-carry-insns] 
+        [-extra-cost n]
+    \end{lstlisting}
 \end{frame}
-\begin{frame}{GNU Superoptimizer}
-\begin{itemize}
-\item https://www.gnu.org/software/superopt/
-\item Usage of superopt command, options and results
-\end{itemize}
-\end{frame}
-\begin{frame}{LLVM and JIT}
-\end{frame}
-\section{Conclusion}
-\begin{frame}{Conclusion}
+
+
+\section{Conclusions and Future Work}
+\begin{frame}{Conclusions}
+    \begin{itemize}
+        \item Optimized programs are always beneficial particularly so in low-level systems
+        \item Ideas in Synthesis are relevant and have been used and improved since
+        \item Superoptimization can provide great performance benefits
+        \item Limitations on size, effort, and time can be countered through automation
+        \item Modern compilers try to incorporate some of the techniques
+    \end{itemize}
+    Future Work:
+    \begin{itemize}
+        \item Improvements have been made on the superoptimization originally proposed in \cite{superopt}
+        \item Goal-oriented, automated and efficient superoptimization techniques have evolved over the years
+        \item Standard compilers also have tools to aid superoptimization
+        \item Further research is required into reducing the search space, optimal equivalence test and possible application of machine learning techniques to train superoptimizers can be thought through.
+    \end{itemize}
 \end{frame}
 
 
@@ -163,9 +299,9 @@ This presentation talks about superoptimization
   \nocite*
 
   \begin{flushright}
-    Marcel Gro\ss mann
+    Madhu Mohan Nelemane
 
-    \structure{\footnotesize{\href{mailto:marcel.grossmann@uni-bamberg.de}{marcel.grossmann@uni-bamberg.de}}}
+    \structure{\footnotesize{\href{mailto:sridhara-madhu-mohan.nelemane@stud.uni-bamberg.de}{sridhara-madhu-mohan.nelemane@stud.uni-bamberg.de}}}
   \end{flushright}
 }
 

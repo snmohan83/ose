@@ -21,30 +21,35 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{synthesis}
+H.~Massalin, ``Synthesis: An efficient implementation of fundamental operating
+  system services,'' \emph{Phd. Thesis, Columbia University}, 1992.
+
+\bibitem{WikipediaEN:RISC}
+\BIBentryALTinterwordspacing
+{Wikipedia, the free encyclopedia}, ``Atomic force microscopy,'' 2022, [Online;
+  accessed Dec 22, 2022]. [Online]. Available:
+  \url{https://en.wikipedia.org/wiki/File:Fivestagespipeline.png}
+\BIBentrySTDinterwordspacing
+
+\bibitem{superopt}
+H.~Massalin, ``Superoptimizer - a look at the smallest program,'' \emph{ACM
+  ASPLOS II}, 1987.
+
 \bibitem{PeepholeAutogen}
-S.~Bansal and A.~Aiken, ``Automatic generation of peephole superoptimizers.''
-
-\bibitem{PeepholeBinary}
-------, ``Binary translations using peephole superoptimizers.''
-
-\bibitem{Superopt}
-H.~Massalin, ``Superoptimizer - a look at the smallest program.''
-
-\bibitem{synthesisOs}
-C.~Pu and H.~Massalin, ``An overview of the synthesis operating system.''
-
-\bibitem{synthesiskernel}
-C.~Pu, J.~Walpole, and H.~Massalin, ``A retrospective study of the synthesis
-  kernel.''
+S.~Bansal and A.~Aiken, ``Automatic generation of peephole superoptimizers,''
+  \emph{ACM ASPLOS II}, 2006.
 
 \bibitem{synthesistoday}
 \BIBentryALTinterwordspacing
- [Online]. Available: \url{https://blog.regehr.org/archives/1676}
+It's time for a modern synthesis kernel. [Online]. Available:
+  \url{https://blog.regehr.org/archives/1676}
 \BIBentrySTDinterwordspacing
 
 \bibitem{GNUSuperopt}
 \BIBentryALTinterwordspacing
- [Online]. Available: \url{https://www.gnu.org/software/superopt/}
+Gnu superoptimizer. [Online]. Available:
+  \url{https://www.gnu.org/software/superopt/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
