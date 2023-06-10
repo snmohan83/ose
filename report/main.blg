@@ -7,53 +7,191 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: acmart.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2913 of file ACM-Reference-Format.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 2974 of file ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "A.Shypula, P.Yin, J.Lacomis, C.Le Goues, E.Schwartz, G.Neubig" for entry realworld
+while executing---line 3072 of file ACM-Reference-Format.bst
+Warning--no journal in realworld
+Warning--no number and no volume in realworld
+Warning--page numbers missing in both pages and numpages fields in realworld
+Warning--no journal in peephole2006
+Warning--no number and no volume in peephole2006
+Warning--page numbers missing in both pages and numpages fields in peephole2006
+Warning--no journal in BTLpeephole
+Warning--no number and no volume in BTLpeephole
+Warning--page numbers missing in both pages and numpages fields in BTLpeephole
+Warning--no journal in stochastic
+Warning--no number and no volume in stochastic
+Warning--page numbers missing in both pages and numpages fields in stochastic
+Warning--no journal in superopt87
+Warning--no number and no volume in superopt87
+Warning--page numbers missing in both pages and numpages fields in superopt87
 Warning--no journal in synthesis92
 Warning--no number and no volume in synthesis92
 Warning--page numbers missing in both pages and numpages fields in synthesis92
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "P.M.Phothilimthana, A.Thakur, R.Bodik, D.Dhurjati" for entry scaleup
+while executing---line 3072 of file ACM-Reference-Format.bst
+Warning--no journal in scaleup
+Warning--no number and no volume in scaleup
+Warning--page numbers missing in both pages and numpages fields in scaleup
+Warning--no journal in denali2001
+Warning--no number and no volume in denali2001
+Warning--page numbers missing in both pages and numpages fields in denali2001
 Warning--empty organization in synthesis2019
-You've used 2 entries,
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "R.Sasnauskas Y.Chen, P.Collingbourne, J.Ketema, G.Lup, J,Taneja, J.Regehr" for entry souper
+while executing---line 3072 of file ACM-Reference-Format.bst
+Warning--no journal in souper
+Warning--no number and no volume in souper
+Warning--page numbers missing in both pages and numpages fields in souper
+Warning--empty organization in SMT
+Warning--empty organization in gnu
+You've used 12 entries,
             5981 wiz_defined-function locations,
-            1482 strings with 18105 characters,
-and the built_in function-call counts, 1535 in all, are:
-= -- 142
-> -- 34
+            1523 strings with 19127 characters,
+and the built_in function-call counts, 9180 in all, are:
+= -- 868
+> -- 246
 < -- 0
-+ -- 8
-- -- 14
-* -- 89
-:= -- 168
-add.period$ -- 9
-call.type$ -- 2
-change.case$ -- 10
-chr.to.int$ -- 2
-cite$ -- 6
-duplicate$ -- 145
-empty$ -- 105
-format.name$ -- 14
-if$ -- 315
++ -- 71
+- -- 105
+* -- 584
+:= -- 1001
+add.period$ -- 57
+call.type$ -- 12
+change.case$ -- 63
+chr.to.int$ -- 12
+cite$ -- 42
+duplicate$ -- 914
+empty$ -- 668
+format.name$ -- 117
+if$ -- 2005
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 59
-num.names$ -- 14
-pop$ -- 58
+missing$ -- 36
+newline$ -- 149
+num.names$ -- 84
+pop$ -- 397
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 159
 quote$ -- 0
-skip$ -- 56
+skip$ -- 310
 stack$ -- 0
-substring$ -- 101
-swap$ -- 9
+substring$ -- 618
+swap$ -- 45
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
-warning$ -- 4
-while$ -- 14
+type$ -- 234
+warning$ -- 30
+while$ -- 84
 width$ -- 0
-write$ -- 77
-(There were 4 warnings)
+write$ -- 265
+(There were 56 error messages)

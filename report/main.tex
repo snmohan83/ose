@@ -237,7 +237,7 @@ The paper \cite{synthesis92} introduces run time code generation to optimize ker
 This section revisits some of the traditional optimization strategies at the level of Assembly language to fully utilize processor capabilities. Most general purpose and specialized processors implement multi-stage instruction pipelines. The most common issue in the pipelines is pipeline stalls. This happens when an instruction has to wait for another instruction to pass a certain stage. For example, a Mov instruction waits for the previous Add instruction to write to the register which is used in the Mov instruction. Several optimization techniques are deviced to avoid such stalls. 
 
 \begin{figure}[h]
-  \includegraphics[width=0.45\textwidth]{pipelines}
+  \includegraphics[width=0.45\textwidth]{images/pipelines}
   \caption{Wikipedia, the free encyclopedia, “Atomic force microscopy,” https://en.wikipedia.org/wiki/File:Fivestagespipeline.png}
   \Description{Stages for instruction queue in common processors}
 \end{figure}
@@ -326,26 +326,182 @@ In such scenarios, the specialists have advanced knowledge of the Instruction ar
 
 \section{Superoptimization}
 
-The concept of superoptimization 
+Superoptimization refers to finding the shortest algorithm for a specific function by dynamically analyzing the code generated at runtime. Its a run-time method and takes into account the environment where the program runs and the state of the program at the point of application. The search space is the complete instruction set of the given CPU architecture. The program component that performs this search and modifies the program accordingly is called a "SuperOptimizer". The next few sections focus on understanding the architecture, variants, application and limitations of such superoptimizers.
 
+\subsection{Understanding Superoptimizer}
 
-\subsection{Understanding Superoptimization}
+Superoptimizer as described in \cite{superopt87} uses three stages : 1) Boolean Test, 2) Probabilistic Test and 3) Pruning. Boolean Test simply performs a boolean verification if the given candidate in the search procedure returns the exact same output as expected from the original program. The test generally uses a binary bit-exactness tests to a certain pre-defined set of minterms to conclude the result.
+The other two stages are steps taken to reduce the search time. 
+Probabilistic test is conducted using a set of test vectors that maximizes the probability that an incorrect program fails thereby reducing the size of the search space. 
+Pruning helps further improve search time by filtering out instructions that are obviously redundant. 
 
-\subsubsection{The Method}
+\begin{figure}[h]
+  \includegraphics[width=0.45\textwidth]{images/superoptimizer}
+  \Description{Basic components of a standard Superoptimizer}
+\end{figure}
 
-\subsubsection{Limitations}
+\subsubsection{Limitations and Applications}
+The standard Superoptimizer described above has an obvious limitation that the searched program is limited to the specific architecture. Moreover, in spite of optimizations through probabilistic test and pruning, the search time can be impractical. Another added limitation is that the method does not describe any technique to handle pointers and pointer arithmetics which is a significant part of any system code including kernel. 
 
-\subsubsection{Applications}
+Due to these limitations, such a superoptimizer is used in register-based operations, design of RISC architectures and also optimizing little tasks that do not use pointers extensively. Effectively, it can be used as a tool to help assembly language programmers in optimizing the programs and also along with other better superoptimizers \cite{peephole2006} as a preparatory step.
 
 \subsection{Peephole Superoptimizers}
 
+The diagram below (derived from \cite{peephole2006}) shows the components of a Peephole superoptimizer.
+
+\begin{figure}[h]
+  \includegraphics[width=0.45\textwidth]{images/autosuperopt}
+  \Description{Architecture of Automatic Peephole Superoptimizer}
+\end{figure}
+
+A peephole superoptimizer is basically intend to replace a sequence of instructions with an equivalent faster sequence of instructions. One proposal \cite{peephole2006} uses automatically generated set of pattern-matching rules from a database of thousands to millions of optimizations. The goal with this superoptimizer is to achieve optimizations that are not explored by the compilers and possibly also not found by human optimizers. 
+
+The optimizations are computed offline and fed into a search database which can be accessed over a network instead of storing locally - referred to as network-based search engine. 
+The type of instructions considered include loop-free assembly sequence. 
+
+The system to achieve peephole superoptimization has several stages briefly described below:
+
+\subsubsection{Harvester}
+
+This stage considers several reprensentative applications identifying harvestable instruction sequence as target sequences. The choice of the target instruction sequences is based on two constraints - 1) The sequence must have a single entry point and 2) After the first instruction, no other instruction in the sequence should be a jump target (ensuring the 1st condition).   
+
+\subsubsection{Canonicalizer}
+
+In this stage, all instruction sequences that are equivalent to other sequences are filtered out to reduce the number of sequences under consideration. For example, A sequence is said to be \textit{canonicalized} if registers and constants are named in the order of their appearance. 
+
+
+\subsubsection{FingerPrinter}
+
+Further filtering is done in order to eliminate equivalence. The result of every instruction sequence in the target group is hashed and any instruction sequence that produces a result with a matching hash is eliminated as unnecessary. The hash is also called the \textit{Fingerprint} of the instruction sequence. A hash table is constructed with hashes for all target instruction sequences. The \textit{fingerprint} is an index into the vector of instruction sequences and is provides much faster access compared to instruction sequence search. 
+
+\subsubsection{Enumerator}
+
+A few additional restrictions when applied to the target instruction sequence group, further reduces the search space. These restricted set of instructions are said to be enumerable instruction sequences. An enumerable instruction set is a sequence that has at most two exit points allowing for at most one conditional instruction in a sequence.  The number of distinct registers is restricted to 4 since most instruction sets under 8 instructions per set use less than 4 registers in practice. The number of constants per instruction set as a common practice is reduced to 2. The number of indirect memory access is also reduced by the constraint on the number of registers used. Also the accessible memory is sandboxed and every instruction set is provided with a suitable offset that places all memory accesses within the sandbox territory. These measures though restrictive produces highly efficient superoptimizations and produce quicker results. Such enumeration steps provide exponential performance benefits. 
+
+
+\subsubsection{Boolean Equivalence Test}
+
+After finding a suitable enumerated instruction sequence from the fingerprint hash table, it is necessary to evaluate the correctness of the sequence. This is achieved through Boolean Equivalance Test. This tests is carried out in two steps: 
+
+\begin{itemize}
+\item{\textbf{Execution Test:}}
+Run the instruction set over a set of test vectors and compare the results.
+\item{\textbf{Boolean Equivalance Test:}}
+This test further tests the equivalence accurately using a SAT solver taking into consideration the current the state of the system defined by the values in the registers and the current memory map.
+\end{itemize}
+
+
+\subsubsection{Optimization Database}
+
+The optimizations discovered in the process can be stored into a database which is indexed by the original instruction sequence in its canonical form and the set of live registers. With this database, the steps to optimize a code sequence becomes simpler and involves steps like, harvesting a sequence, canonicalizing it and searching the database to find if an optimization exists. This can be a running database that gets updated if an optimization is not found and is discovered through the longer process. In summary, the database can act as an intermediate cache for optimizations. 
 
 \section{Superoptimizers in Modern Compilers}
 
+The GNU compiler provides a simple Command Line tool that can produce superoptimized code from a set of assembly instructions on a specific architecture. The tool supports several architectures and acts as a helping aid to developers and professional optimizers as an initial step before they carry out more elaborate optimizations. The documentation for this tool is available at \cite{gnu} and can be experimented on any linux distribution. 
+
+SPARC, MC68000, MC68020, M88000, POWER, POWERPC, AM29K, I386, I960 (for i960 1.0), I960B (for I960B 1.1), PYR, ALPHA, HPPA, SH are supported by this tool.
+
+An example usage is depicted below:
+
+\begin{verbatim}
+
+$ make CPU=-D<cpu_name_from_list> superopt
+$ superopt -f <goal-function> | -all [-assembly] 
+  [-max-cost n] [-shifts] [-extracts] [-no-carry-insns] 
+  [-extra-cost n]
+
+\end{verbatim}
+
+As we can see this tool is easy to use and universally available. However, the key limitation of superopt CLI tool is that its too slow. The time complexity of the underlying algorithm is exponential with respect to the instructions on the architecture. Some instructions sets with just 7 instructions might take a week to produce the optimization result. Hence this is still not practical for many use-cases.
+
+Here is an example of working with GNU Superopt. The example generates 6 possible sequences of assmembly instructions for i386 architecture to execute the ABS instruction.
+
+\begin{verbatim}
+
+$ superopt-i386 -fabs -as
+Searching for { r = (signed_word) v0 < 0 ? -v0 : v0; }
+Superoptimizing at cost 1 2 3 4
+
+1:	movl	%eax,%edx
+	sarl	$31,%edx
+	addl	%edx,%eax
+	xorl	%eax,%edx
+
+2:	movl	%eax,%edx
+	sarl	$31,%edx
+	addl	%edx,%eax
+	xorl	%edx,%eax
+
+3:	movl	%eax,%edx
+	sarl	$31,%edx
+	xorl	%edx,%eax
+	subl	%edx,%eax
+
+4:	movl	%eax,%edx
+	sarl	$31,%eax
+	addl	%eax,%edx
+	xorl	%eax,%edx
+
+5:	movl	%eax,%edx
+	sarl	$31,%eax
+	addl	%eax,%edx
+	xorl	%edx,%eax
+	
+6:	movl	%eax,%edx
+	sarl	$31,%eax
+	xorl	%eax,%edx
+	subl	%eax,%edx
+[6 sequences found]
+
+\end{verbatim}
+
+The max-cost paramater can be set to convey the maximum number of instructions the optimizer can use limiting the number sequences to those that can be executed with this cost. For example, reducing the max-cost for the ABS example above to 3 leads to failure since the superoptimizer cannot find any such sequences.
+
+\begin{verbatim}
+
+$ superopt-i386 -fabs -as -max-cost 3
+Searching for { r = (signed_word) v0 < 0 ? -v0 : v0; }
+Superoptimizing at cost 1 2 3 failure.
+
+\end{verbatim}
+
+\subsection{A Synthesizing Superoptimizer}
+
+Another effort worth mentioning regarding superoptimizations in modern compilers is described in \cite{souper}. \cite{souper} along with the source at \textit{https://github.com/google/souper} presents a synthesizing superoptimizer that generates optimizations using SMT solvers which generalizes the binary SAT solver to consider real numbers, integers and other data structures including arrays, bit-vectors and more (\cite{SMT}). The superoptimizer was called Souper and was able to work with LLVM and Microsoft Visual C++ compilers.  
+
+TODO: A PRACTICAL SOUPER EXAMPLE HERE
+
+\subsection{Superoptimization of WebAssembly Bytecode}
+
+
 \section{Other Related Works and Future Direction}
+
+In this paper, the initial works of Massallin \cite{superopt87}, peephole superoptimizers \cite{peephole2006} and the implementations in currenProjectt GNU compilers are presented. In addition to this \cite{denali2001} presents a goal-directed superoptimizer that uses an automatic-theorem prover to generate optimal code for several architectures. The general problem with the superoptimizers has been that the programs generated are relevant to specific processor architectures. Traditional techniques lacked scalability and using them on large programs pose several practical challenges. However, owing to improved computing with the advent of cloud computing and evolution of several statistical techniques including machine learning, have recently provided opportunities to look into superoptimization of programs. Some areas where more research has been carried out and future directions are present here.
+
+\subsection{Applications and Use-cases}
+
+One area that has been explored with superoptimization is enhancing the use-cases where superoptimizers can be applied. Generally used as an aide to professional optimizers and developers, it can be extended if there is a way to apply across multiple architectures. The binary translation using superoptimizer as presented in \cite{BTLpeephole} as a solution to translate optimized assembly from one architecture to another. 
+
+\subsection{Scalability}
+These techniques allow for scalable superoptimization. The paper \cite{scaleup} presents an approach presents a search algorithm called LENS that increases the size of the code synthesizable by the superoptimizer. The problem at hand is to search for a program that is semantically equivalent to a given program, but faster according to a specific performance model that uses a set of test cases comprising of test-inputs and test-outputs. The paper \cite{scaleup} models as a graph search problem with each program state represented as a node. The starting node is a set of instructions and the goal node is the optimized equivalent or the target program.
+
+\subsection{Statistical Approaches}
+
+\cite{stochastic}
+
+\subsection{Machine Learning Approaches}
+
+Over the last decade, machine learning and deep learning techniques have made unbelivable advances and have seen use-cases in various fields. It is only but natural, that the domain of systems optimization cannot be left out. A large number of really good code easily accessible from open source repositories creates a huge data set which the authors of \cite{realworld} call \textbf{Big Assembly}. \cite{realworld} describes an approach called SILO (Self Imitation Learning Optimization) that is trained on a subset of the Big Assembly and progressively improve superoptimization ability with this training. 
+
+\cite{realworld}
 
 
 \section{Conclusions}
+
+Synthesis kernel introduced the concept of runtime code generation and superoptimization to enhance the kernel performance. Some of these concepts are relevant even to this day when applied with the modern approaches and new use-cases can be discovered. 
+
+
+
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{acmart.bib}

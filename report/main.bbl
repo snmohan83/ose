@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{12}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,6 +37,52 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[A.Shypula(2022)]%
+        {realworld}
+\bibfield{author}{\bibinfo{person}{J.Lacomis C.Le Goues E.Schwartz~G.Neubig
+  A.Shypula, P.Yin}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Learning to Superoptimize Real-World Programs}.
+\newblock  (\bibinfo{year}{2022}).
+\newblock
+
+
+\bibitem[Bansal and Aiken(2006)]%
+        {peephole2006}
+\bibfield{author}{\bibinfo{person}{Sorav Bansal} {and} \bibinfo{person}{Alex
+  Aiken}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Automatic Generation of Peephole Superoptimizers}.
+\newblock  (\bibinfo{year}{2006}).
+\newblock
+
+
+\bibitem[Bansal and Aiken(2008)]%
+        {BTLpeephole}
+\bibfield{author}{\bibinfo{person}{Sorav Bansal} {and} \bibinfo{person}{Alex
+  Aiken}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Binary Translation Using Peephole Superoptimizer}.
+\newblock  (\bibinfo{year}{2008}).
+\newblock
+
+
+\bibitem[Eric~Schkufza(2016)]%
+        {stochastic}
+\bibfield{author}{\bibinfo{person}{Alex~Aiken Eric~Schkufza, Rahul~Sharma}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Stochastic Superoptimizer}.
+\newblock  (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[Massalin(1987)]%
+        {superopt87}
+\bibfield{author}{\bibinfo{person}{Henry Massalin}.}
+  \bibinfo{year}{1987}\natexlab{}.
+\newblock \showarticletitle{Superoptimization - a look at the smallest
+  program}.
+\newblock  (\bibinfo{year}{1987}).
+\newblock
+
+
 \bibitem[Massalin(1992)]%
         {synthesis92}
 \bibfield{author}{\bibinfo{person}{Henry Massalin}.}
@@ -47,11 +93,66 @@
 \newblock
 
 
+\bibitem[P.M.Phothilimthana(2016)]%
+        {scaleup}
+\bibfield{author}{\bibinfo{person}{R.Bodik~D.Dhurjati P.M.Phothilimthana,
+  A.Thakur}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Scaling up Superoptimization}.
+\newblock  (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[Rajeev~Joshi and Randall(2001)]%
+        {denali2001}
+\bibfield{author}{\bibinfo{person}{Greg~Nelson Rajeev~Joshi} {and}
+  \bibinfo{person}{Keith~H. Randall}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Denali: A Goal-Directed Superoptimizer}.
+\newblock  (\bibinfo{year}{2001}).
+\newblock
+\urldef\tempurl%
+\url{http://www.research.compaq.com/SRC}
+\showURL{%
+\tempurl}
+
+
 \bibitem[Regehr(2019)]%
         {synthesis2019}
 \bibfield{author}{\bibinfo{person}{John Regehr}.}
   \bibinfo{year}{2019}\natexlab{}.
 \newblock \bibinfo{booktitle}{\emph{It's time for a Modern Synthesis Kernel}}.
+\newblock
+\urldef\tempurl%
+\url{https://blog.regehr.org/archives/1676}
+\showURL{%
+\tempurl}
+
+
+\bibitem[R.Sasnauskas~Y.Chen(2018)]%
+        {souper}
+\bibfield{author}{\bibinfo{person}{J.Ketema G.Lup J Taneja~J.Regehr
+  R.Sasnauskas~Y.Chen, P.Collingbourne}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{A Synthesizing Superoptimizer}.
+\newblock  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[Various~Authors(2006)]%
+        {SMT}
+\bibfield{author}{\bibinfo{person}{Adapted from ACM SIGDA newsletter Prof.
+  Karem~Sakallah Various~Authors}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Satisfiability modulo theories}}.
+\newblock
+\urldef\tempurl%
+\url{https://en.wikipedia.org/wiki/Satisfiability_modulo_theories}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Various~Authors(1995)]%
+        {gnu}
+\bibfield{author}{\bibinfo{person}{Opensource Maintainer Thien-Thi~Nguyen
+  Various~Authors}.} \bibinfo{year}{1995}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{GNU Superoptimizer}}.
 \newblock
 \urldef\tempurl%
 \url{https://blog.regehr.org/archives/1676}
